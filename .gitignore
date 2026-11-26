@@ -5,7 +5,8 @@ node_modules/
 dist/
 coverage/
 reports/
-BACKEND/uploads/
+BACKEND/uploads/*
+!BACKEND/uploads/.gitkeep
 *.log
 .DS_Store
 .vscode/

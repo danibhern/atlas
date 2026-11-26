@@ -46,6 +46,16 @@
         "functions": 80,
         "branches": 70
       }
-    }
+    },
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "reports",
+          "outputName": "junit.xml"
+        }
+      ]
+    ]
   }
 }
