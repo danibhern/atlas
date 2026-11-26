@@ -48,7 +48,15 @@ app.get("/", (req, res) => {
   res.json({ name: "Atlas", status: "ok" });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Atlas API escuchando en puerto ${PORT}`);
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
 });
+
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Atlas API escuchando en puerto ${PORT}`);
+  });
+}
+
+module.exports = app;

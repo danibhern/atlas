@@ -29,7 +29,6 @@ import { useAuth } from "../../hooks/useAuth";
 export default function ContratosTabList({
   items,
   onDelete,
-  onLoad,
   loading = false,
 }) {
   const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4450";

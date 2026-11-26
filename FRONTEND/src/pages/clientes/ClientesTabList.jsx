@@ -24,7 +24,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
-export default function ClientesTabList({ items, onDelete, onLoad, loading = false }) {
+export default function ClientesTabList({ items, onDelete, loading = false }) {
   const { role } = useAuth();
   const navigate = useNavigate();
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);

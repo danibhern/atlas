@@ -28,7 +28,7 @@ export default function ContratosTabCreate({ onSuccess, onLoad }) {
       try {
         const { data } = await api.get("/clientes");
         setClientes(data || []);
-      } catch (error) {
+      } catch {
         toast.error("Error al cargar clientes");
       }
     })();
